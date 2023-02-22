@@ -1,0 +1,19 @@
+.tiptap-wrapper {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.stamp-wrapper {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.stamp-wrapper input {
+  min-width: 400px;
+  margin-left: 2rem;
+}
