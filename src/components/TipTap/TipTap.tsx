@@ -16,7 +16,7 @@ const MenuBar = ({editor, slider}) => {
     };
 
     return (
-        <>
+        <div className="tiptap__button-wrapper">
             <button onClick={onStamp} className={editor.isActive("bold") ? "is-active" : ""}>
                 Stamp
             </button>
@@ -39,7 +39,7 @@ const MenuBar = ({editor, slider}) => {
             >
                 italic
             </button>
-        </>
+        </div>
     );
 };
 
@@ -51,7 +51,6 @@ const Tiptap = ({slider, onClickStamptext}) => {
             handleClickOn: (view) => {
                 const attrs = getAttributes(view.state, "stamptext");
                 const stamp = attrs.stamp;
-                console.log("handleClickOn", stamp);
                 if (stamp) {
                     onClickStamptext(stamp);
                 }

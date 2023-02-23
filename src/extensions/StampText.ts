@@ -1,6 +1,7 @@
 import {Mark, mergeAttributes} from "@tiptap/core";
 import {Plugin} from "@tiptap/pm/state";
 import {clickHandler} from "./helpers/stampClickHanlder";
+import {tooltipHandler} from "./helpers/stampTooltipHanlder";
 
 export interface StampOptions {
     HTMLAttributes: Record<string, unknown>;
@@ -56,6 +57,13 @@ const StampText = Mark.create<StampOptions>({
 
         plugins.push(
             clickHandler({
+                type: this.type
+            })
+        );
+
+        plugins.push(
+            tooltipHandler({
+                editor: this.editor,
                 type: this.type
             })
         );

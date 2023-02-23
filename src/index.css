@@ -37,3 +37,14 @@ body {
   margin: auto;
   padding: 0 5rem;
 }
+
+button {
+  background: #fff;
+  border: 1px solid #17a2b8;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  cursor: pointer;
+  color: #17a2b8;
+}

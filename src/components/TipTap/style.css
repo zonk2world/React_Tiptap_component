@@ -1,19 +1,70 @@
 .tiptap-wrapper {
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.tiptap__button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.ProseMirror {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
 }
 
 .stamp-wrapper {
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .stamp-wrapper input {
-  min-width: 400px;
-  margin-left: 2rem;
+    min-width: 400px;
+    margin-left: 2rem;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 20;
+    background: white;
+    border: 1px solid silver;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    margin-bottom: -0.5rem;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.tooltip:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    bottom: -6px;
+    border: 5px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: silver;
+}
+
+.tooltip:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    bottom: -4.5px;
+    border: 5px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: white;
 }
