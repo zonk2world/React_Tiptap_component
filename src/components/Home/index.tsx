@@ -39,6 +39,7 @@ const Home = () => {
 
             <Tiptap slider={JSON.stringify(vState)} onClickStamptext={onClickStamptext} />
 
+            <input type="hidden" id="viewState" value={JSON.stringify(vState)} />
             <div className="stamp-wrapper">
                 <label htmlFor="stamp">Stamp: {slider}</label>
                 <input

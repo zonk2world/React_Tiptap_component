@@ -20,9 +20,9 @@ export default class StampTooltip {
         // TODO: this is not a right approach
         // we need to find a way to pass an external prop to this plugin
         stampButton.addEventListener("click", () => {
-            const stamp = (document.getElementById("stamp") as HTMLInputElement).value;
+            const stamp = (document.getElementById("viewState") as HTMLInputElement).value;
             const editor = this.tooltipOptions.editor;
-            editor.commands.setMark(this.tooltipOptions.type.name, {stamp: parseInt(stamp) / 100});
+            editor.commands.setMark(this.tooltipOptions.type.name, {stamp});
         });
 
         this.update(view, null);
