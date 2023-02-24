@@ -48,3 +48,27 @@ button {
   cursor: pointer;
   color: #17a2b8;
 }
+
+#deckgl-wrapper {
+  position: relative !important;
+}
+
+pre {
+  padding: 1rem;
+  background-color: #efefef;
+}
+
+.map-container {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.map-wrapper {
+  width: 70%;
+}
+
+.map-wrapper + pre {
+  flex-grow: 1;
+  margin: 0;
+}
