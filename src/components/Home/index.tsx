@@ -1,7 +1,14 @@
 import React, {useState} from "react";
 import Tiptap from "../TipTap/TipTap";
 import DeckMap from "components/DeckMap/DeckMap";
-import {InitialViewStateProps} from "@deck.gl/core/lib/deck";
+
+interface InitialViewStateProps {
+    zoom: number;
+    longitude: number;
+    latitude: number;
+    pitch: number;
+    bearing: number;
+}
 
 const Home = () => {
     const [slider, setSlider] = useState<number>(0);

@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@danmarshall/deckgl-typings": "^4.9.27",
-    "@deck.gl/core": "^8.8.25",
+    "@deck.gl/core": "^8.8.26",
     "@deck.gl/geo-layers": "^8.8.25",
     "@deck.gl/json": "^8.8.25",
     "@deck.gl/layers": "^8.8.25",
@@ -53,6 +53,7 @@
     "@tiptap/react": "^2.0.0-beta.218",
     "@tiptap/starter-kit": "^2.0.0-beta.218",
     "deck.gl": "^8.8.25",
+    "gsap": "^3.11.4",
     "linkify-react": "^4.1.0",
     "linkifyjs": "^4.1.0",
     "react": "^18.0.0",

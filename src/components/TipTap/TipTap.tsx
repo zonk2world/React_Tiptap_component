@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {getAttributes} from "@tiptap/core";
 import {useEditor, EditorContent} from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
@@ -46,7 +46,8 @@ const MenuBar = ({editor, slider}) => {
 const Tiptap = ({slider, onClickStamptext}) => {
     const editor = useEditor({
         extensions: [StarterKit, Paragraph, CustomText],
-        content: "<p><span>Hello</span> World ! This is a test ...</p>",
+        content:
+            "<h1>Hello World !</h1><h2>This is a test.</h2><p>Lorem ipsum dolor sit amet...</p>",
         editorProps: {
             handleClickOn: (view) => {
                 const attrs = getAttributes(view.state, "stamptext");
@@ -58,10 +59,31 @@ const Tiptap = ({slider, onClickStamptext}) => {
         }
     });
 
+    useEffect(() => {
+        const scrollWrap = document.querySelector(".scroll-wrapper");
+        scrollWrap.addEventListener("scroll", handleScrolling);
+
+        // cleanup this component
+        return () => {
+            scrollWrap.removeEventListener("scroll", handleScrolling);
+        };
+    }, []);
+
+    const handleScrolling = (e) => {
+        const scrollWrap = e.target;
+        const editorWrap = scrollWrap.querySelector(".ProseMirror");
+        const animTarget = scrollWrap.querySelector("h1");
+        const offset =
+            scrollWrap.getBoundingClientRect().top - animTarget.getBoundingClientRect().top;
+        console.log("Scroll Percentage: ", (offset / editorWrap?.clientHeight).toFixed(2));
+    };
+
     return (
         <div className="tiptap-wrapper">
             <MenuBar editor={editor} slider={slider} />
-            <EditorContent editor={editor} />
+            <div className="scroll-wrapper">
+                <EditorContent editor={editor} />
+            </div>
         </div>
     );
 };
